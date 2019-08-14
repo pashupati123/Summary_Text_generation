@@ -35,6 +35,14 @@ def get_summary(input_txt):
 						sentence_scores[sent] = word_frequencies[word]
 					else:
 						sentence_scores[sent] += word_frequencies[word]
+	#Divinding sentence score by toatl number of token in the sentence					
+	for sent in sentence_list:
+		sen_word_count=0
+		for word in nltk.word_tokenize(sent.lower()):
+			sen_word_count=sen_word_count+1
+		if sent in sentence_scores.keys():
+			sentence_scores[sent]=sentence_scores[sent]/sen_word_count
+			
 	numberof_summary_line=(len(sentence_list)*10)/100
 	summary_sentences = heapq.nlargest(numberof_summary_line, sentence_scores, key=sentence_scores.get)
 	summary = ' '.join(summary_sentences)
