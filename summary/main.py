@@ -1,5 +1,7 @@
 import os
 import summary as sum
+#import same_doc_tf_idf_summary as sum
+#import retuers_corpus_tf_idf_summary as sum
 article_text=""
 with open("in.txt", "r") as lines:
     for line in lines:
