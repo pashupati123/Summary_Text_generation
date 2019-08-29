@@ -14,7 +14,7 @@ def find_freq_word_in_different_doc(word):
 	count_freq=0
 	for i in range(1,10789):
 		path="/Users/pverma/Desktop/separate_reuters_summary/separate_dict_documents/"+str(i)+".json"
-		print(path)
+		#print(path)
 		with open(path) as f:
 			data = json.load(f)
 		doc_dict=data
