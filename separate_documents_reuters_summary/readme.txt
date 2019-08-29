@@ -1,0 +1,5 @@
+1) First run the prefetch.py file which will generate the separate 10788 json files inside  separate_dict_documents folder. It is one time effort.
+
+2) After that on every request main.py call get_summary in which 10788 json file will load as dict for each word to calculate word_frequency dict after it will calculate tf-idf which will be used for sentences score calculation.
+
+3) Time consuming process not suitable for real time summarisation
