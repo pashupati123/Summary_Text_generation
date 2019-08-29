@@ -4,3 +4,7 @@
 3) After that on every request main.py call get_summary in which 10788 json file will load as dict for each word to calculate word_frequency dict after it will calculate tf-idf which will be used for sentences score calculation.
 
 4) Time consuming process not suitable for real time summarisation
+
+5) Note: change the File_path_name accordingly
+
+
