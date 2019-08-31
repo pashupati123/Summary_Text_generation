@@ -43,6 +43,9 @@ def get_summary(input_txt):
 
 	word_idf={}
 	for word in word_frequencies:
+		word_idf[word]=word_frequencies[word]
+
+	for word in word_idf:
 		word_idf[word] = word_idf[word]*math.log(DOCUMENTS_COUNT / float(1 + word_idf[word]))
 
 	sentence_scores = {}
